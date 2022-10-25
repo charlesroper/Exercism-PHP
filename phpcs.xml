@@ -6,31 +6,31 @@
     <file>.</file>
 
     <!-- Scan only PHP files -->
-    <arg name="extensions" value="php"/>
+    <arg name="extensions" value="php" />
 
     <!-- Show colors in console -->
-    <arg value="-colors"/>
+    <arg value="-colors" />
 
     <!-- Show sniff codes in all reports -->
-    <arg value="ns"/>
+    <arg value="ns" />
 
     <!-- Include the WordPress-Extra standard. -->
     <rule ref="PSR12">
         <!-- Exclude any rules here -->
         <!-- <exclude name="WordPress.PHP.DisallowShortTernary"/> -->
-         
+        <exclude name="Generic.WhiteSpace.DisallowTabIndent" />
     </rule>
 
     <rule ref="PSR1">
-        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace" />
     </rule>
 
     <!-- Let's also check that everything is properly documented.-->
     <!-- <rule ref="WordPress-Docs"/> -->
 
     <!-- Add in some extra rules from other standards. -->
-    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
-    <rule ref="Generic.Commenting.Todo"/>
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+    <rule ref="Generic.Commenting.Todo" />
 
-    <config name="minimum_supported_wp_version" value="4.9"/>
+    <config name="minimum_supported_wp_version" value="4.9" />
 </ruleset>

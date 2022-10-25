@@ -1,0 +1,9 @@
+{
+	"editor.formatOnSave": true,
+	"php-cs-fixer.allowRisky": true,
+	"php-cs-fixer.formatHtml": true,
+	"php-cs-fixer.onsave": true,
+	"[php]": {
+		"editor.defaultFormatter": "junstyle.php-cs-fixer"
+	},
+}
