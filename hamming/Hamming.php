@@ -3,22 +3,23 @@
 declare(strict_types=1);
 
 /**
- * Calculate the hamming distance between two DNA strands
+ * Calculate the hamming distance between two DNA strands.
  *
- * @param string $strandA First DNA strand to compare.
- * @param string $strandB Second DNA strand to compare.
- * @throws InvalidArgumentException if the length of strands are not equal.
- * @return integer Returns the count of differences; that is, the "distance".
+ * @param string $strandA first DNA strand to compare
+ * @param string $strandB second DNA strand to compare
+ *
+ * @return int returns the count of differences; that is, the "distance"
+ *
+ * @throws InvalidArgumentException if the length of strands are not equal
  */
 function distance(string $strandA, string $strandB): int
 {
-    if (strlen($strandA) != strlen($strandB)) {
-        throw new InvalidArgumentException('DNA strands must be of equal length.');
-    }
+	if (strlen($strandA) != strlen($strandB)) {
+		throw new InvalidArgumentException('DNA strands must be of equal length.');
+	}
 
-    $arrayA = str_split($strandA);
-    $arrayB = str_split($strandB);
-    $distance = count(array_diff_assoc($arrayA, $arrayB));
+	$arrayA = str_split($strandA);
+	$arrayB = str_split($strandB);
 
-    return $distance;
+	return count(array_diff_assoc($arrayA, $arrayB));
 }
